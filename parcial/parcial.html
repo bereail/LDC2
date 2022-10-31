@@ -4,54 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="parcial.js"></script>
-    <title>Parcial</title>
+    <title>Título</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="titulp">
-        <h3>Iphone 13 Pro</h3>
+    <div class="product-image">
+        <img src="img/iphone_13.png" alt="iphone" />
+        <br><br>
     </div>
-        <form action="">
-            <section id="tipoUsuario">                               
-                        <form action="#">
-                            <div class="content-select">
-                                <select name="select" id="selectUsuario">
-                                    <option value="" disabled selected> -- Seleccione una opcion --</option>
-                                    <option value="gold">Gold</option>
-                                    <option value="grafito">Grafito</option>
-                                    <option value="silver">Silver</option>                                   
-                                    <option value="sierra">Sierra</option>
-                                </select>
-                            </div>
-                        </form>
-                    <br>
+    <div class="product-details">
+        <div class="product-details-content">
+            <h2>iPhone 13 Pro</h2>
+            <form action="">
+                <div class="form-control">  
+                    <label>Color</label>
+                    <select  required id="selected_color" onchange="changeProductImage()">
+                        <option disabled selected value="0" > -- Seleccione una opción -- </option>
+                        <option value="graphite" id="color">Grafito</option>
+                        <option value="gold" id="color">Gold</option>
+                        <option value="sierra" id="color">Sierra</option>
+                        <option value="silver" id="color">Silver</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label>Capacidad</label>
+                    <select  required id="selected_gb">
+                        <option value="0" disabled selected> -- Seleccione una opción -- </option>
+                        <option value="128" id="GB">128 GB</option>
+                        <option value="256" id="GB">256 GB</option>
+                        <option value="512" id="GB">512GB</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label>Cantidad</label>
+                    <input type="number" id="selected_cant" min="0" max="10" placeholder="0" required>
+                </div>
+                <div class="form-control">
+                    <button type="button" onclick="calculatePrice()">Cotizar</button>
+                </div>
+            <section style = "font-size: 16px;" id="caja_color">
+                <div  id="result" class="form-control">
+                    Resultado cotización o error
+                </div>
             </section>
-        </form>
-            <section id="zona">
-                <form action="#">
-                    <div class="content-select">
-                        <select name="select" id="selectZona" >
-                            <option value="0" disabled selected> -- Seleccione una opcion --</option>
-                            <option value="12GB">12GB</option>
-                            <option value="256">256GB</option>
-                            <option value="512">512GB</option>
-                        </select>
-                    </div>
-                </form>
-                <section id="candiad">
-                    <form action="#">
-                        <div class="selected-cant">
-                            <label for="cantidad" id="cant">Cantidad:</label>
-                            <input type="number" id="cantidad" placeholder="0">
-                        </div>
-                    </form>
-                </section>
-                <section id="total">
-                    <div class="form-input">
-                        <button class="btn" id="btn" onclick="cotizar();">COTIZAR</button>
-                    </div>    
-                </section>       
-              
-    </form>
+            </form>
+        </div>
+    </div>
+<script>
+
+function calculatePrice(){
+    const color = document.getElementById("selected_color").value;
+    const gb = document.getElementById("selected_gb").value;
+    const cant = document.getElementById("selected_cant").value;
+    const result = document.getElementById("result")
+    const total = gb * cant
+
+if(color === 0 || gb === 0 || cant <= 0 || cant > 10){
+    result.innerHTML = "Error: complete todo los campos";
+    document.getElementById("result").style.backgroundColor = "#FF0000";    
+    }else{
+    result.innerHTML = "Cotización:";
+    document.getElementById("result").style.backgroundColor = "#008000";
+}
+
+}
+
+
+
+
+/*if(color == 0 || gb== 0 || cant <= 0 || cant > 10){
+        alert(true)
+        alert(cant)
+}else{
+    alert(false);
+    alert(color);
+}
+}
+*/
+</script>
 </body>
 </html>
+   
+
+

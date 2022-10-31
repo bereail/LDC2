@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practica_pre_parcial.js">
+    <script src="practica_pre_parcial.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   <section id="form-input">
+        <form action="" class="form-input">
+            <div id="consumo_pesos">
+                <label class="consumo" for="pesos" id="c">Cantidad de pesos: </label>
+                <input class="consumo" type="number" id="pesos">
+            </div>
+    </form>
+        <form action="#">
+            <div id="consumo_extranjero">
+                <select name="select" id="select_moneda">
+                <option id="select_moneda" value="0"> Seleccione moneda extranjera: </option>
+                <option id="euros" value="151.10">euros</option>
+                <option id="dolares" value="153.81">dólares</option>
+                </select>
+            </div>
+    </form>
+</section>
+<section id="btn">
+        <div clas="form-input">
+            <button type="submit" onclick="calcular_venta()">Calcular venta</button>
+        </div>
+    </section>
+    <section id="final">
+        <div id="resultado">
+            
+            <h1 >
+                <label class="consumo" id="resultado">Resultado: </label>
+                 <div id="result"></div>
+            </h1>
+        </div>
+    </section>
+<script> 
+</script>
+</body>
+</html>

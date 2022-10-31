@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="parcial.js"></script>
+    <title>Parcial</title>
+</head>
+<body>
+    <div id="titulp">
+        <h3>Iphone 13 Pro</h3>
+    </div>
+        <form action="">
+            <section id="tipoUsuario">                               
+                        <form action="#">
+                            <div class="content-select">
+                                <select name="select" id="selectUsuario">
+                                    <option value="" disabled selected> -- Seleccione una opcion --</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="grafito">Grafito</option>
+                                    <option value="silver">Silver</option>                                   
+                                    <option value="sierra">Sierra</option>
+                                </select>
+                            </div>
+                        </form>
+                    <br>
+            </section>
+        </form>
+            <section id="zona">
+                <form action="#">
+                    <div class="content-select">
+                        <select name="select" id="selectZona" >
+                            <option value="0" disabled selected> -- Seleccione una opcion --</option>
+                            <option value="12GB">12GB</option>
+                            <option value="256">256GB</option>
+                            <option value="512">512GB</option>
+                        </select>
+                    </div>
+                </form>
+                <section id="candiad">
+                    <form action="#">
+                        <div class="selected-cant">
+                            <label for="cantidad" id="cant">Cantidad:</label>
+                            <input type="number" id="cantidad" placeholder="0">
+                        </div>
+                    </form>
+                </section>
+                <section id="total">
+                    <div class="form-input">
+                        <button class="btn" id="btn" onclick="cotizar();">COTIZAR</button>
+                    </div>    
+                </section>       
+              
+    </form>
+</body>
+</html>

@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Título</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="product-image">
-        <img src="img/iphone_13.png" alt="iphone" />
+    <div class="product-image" id="product_img">
+        <img id="imagenes" src="img/iphone_13.png" alt="iphone" />
         <br><br>
     </div>
     <div class="product-details">
@@ -50,38 +51,7 @@
             </form>
         </div>
     </div>
-<script>
 
-function calculatePrice(){
-    const color = document.getElementById("selected_color").value;
-    const gb = document.getElementById("selected_gb").value;
-    const cant = document.getElementById("selected_cant").value;
-    const result = document.getElementById("result")
-    const total = gb * cant
-
-if(color === 0 || gb === 0 || cant <= 0 || cant > 10){
-    result.innerHTML = "Error: complete todo los campos";
-    document.getElementById("result").style.backgroundColor = "#FF0000";    
-    }else{
-    result.innerHTML = "Cotización:";
-    document.getElementById("result").style.backgroundColor = "#008000";
-}
-
-}
-
-
-
-
-/*if(color == 0 || gb== 0 || cant <= 0 || cant > 10){
-        alert(true)
-        alert(cant)
-}else{
-    alert(false);
-    alert(color);
-}
-}
-*/
-</script>
 </body>
 </html>
    
